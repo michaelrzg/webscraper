@@ -1,3 +1,9 @@
+# Michael Rizig
+# CS7263
+# Professor Jiho Noh
+# 6/2/25
+# WebCrawler
+
 from urllib.request import HTTPError, urlopen
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
