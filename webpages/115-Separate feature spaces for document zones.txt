@@ -1,0 +1,89 @@
+
+
+
+
+
+Separate feature spaces for document zones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Next: Connections to text summarization.
+ Up: Document zones in text
+ Previous: Upweighting document zones.
+    Contents 
+    Index
+
+
+
+
+Separate feature spaces for document zones.
+ There are two
+strategies that can be used for document zones.  Above we upweighted
+words that appear in certain zones.  This means that we are using the
+same features (that is, parameters are 
+   
+across
+different zones), but we pay more attention to the occurrence of terms
+in particular zones.  An alternative strategy is to have a completely
+separate set of features and corresponding parameters for words
+occurring in different zones.  This is in principle more powerful: a
+word could usually indicate the topic Middle East when in the
+title but Commodities when in the body of a document.  But, in
+practice, tying parameters is usually more successful.  Having
+separate feature sets means having two or more times as many
+parameters, many of which will be much more sparsely seen in the
+training data, and hence with worse estimates, whereas upweighting has
+no bad effects of this sort.  Moreover, it is quite uncommon for words
+to have different preferences when appearing in different zones; it is
+mainly the strength of their vote that should be adjusted.
+Nevertheless, ultimately this is a contingent result, depending on the
+nature and quantity of the training data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Next: Connections to text summarization.
+ Up: Document zones in text
+ Previous: Upweighting document zones.
+    Contents 
+    Index
+
+
+© 2008 Cambridge University PressThis is an automatically generated page. In case of formatting errors you may want to look at the PDF edition of the book.
+2009-04-07
+
+
+

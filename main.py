@@ -59,10 +59,19 @@ class Crawler:
         remove_anchor = url.split("#")[0]
         remove_queries = remove_anchor.split("?")[0]
         return remove_queries
+
     # get the title and info of link
     def extract_info(self,url,soup):
         url = self.clean_url(url)
-        self.library[url] = (soup.title, soup.get_text())
+        self.library[url] = (soup.title.string, soup.get_text())
+
+    def save_webpages(self,library):
+        index=0
+        for key in library:
+            with open(f"webpages/{index}-{library[key][0].replace("/","").replace(".","")}.txt",'w') as file:
+                file.write(""+library[key][1])
+                file.flush()
+                index+=1
 
     # run
     def crawl(self):
@@ -82,7 +91,7 @@ class Crawler:
             # discover new links and add them to the queeu
             self.discover_urls(soup,nextlink)
             self.counter+=1
-            print(len(self.library))
+        self.save_webpages(self.library)
 
 
 crawler = Crawler("https://nlp.stanford.edu/IR-book/information-retrieval-book.html")

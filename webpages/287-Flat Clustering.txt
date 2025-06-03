@@ -1,0 +1,14 @@
+Flat Clustering
+Flat Clustering
+ Under construction ...
+
+Clustering software
+
+LingPipe
+Cluster 3.0
+
+Search result clustering:
+Nutch,
+Carrot
+Oracle
+

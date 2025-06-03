@@ -1,0 +1,62 @@
+
+
+
+
+
+Upweighting document zones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Next: Separate feature spaces for
+ Up: Document zones in text
+ Previous: Document zones in text
+    Contents 
+    Index
+
+
+
+
+Upweighting document zones.
+ In text classification problems, you
+can frequently get a nice boost to effectiveness by differentially
+weighting contributions from different document zones.  Often,
+upweighting title words is particularly effective
+(Cohen and Singer, 1999, p. 163).  As a rule of thumb, it is often effective to
+double the weight of title words in text classification problems.
+You can also get value from upweighting words from pieces of text that
+are not so much clearly defined zones, but where nevertheless
+evidence from document structure or content suggests that they are important.
+Murata et al. (2000) suggest that you can also get value (in an ad
+hoc retrieval context) from upweighting the first sentence of a
+(newswire) document.  
+
+
+
+
+© 2008 Cambridge University PressThis is an automatically generated page. In case of formatting errors you may want to look at the PDF edition of the book.
+2009-04-07
+
+
+

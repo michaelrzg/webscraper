@@ -1,0 +1,23 @@
+
+
+
+
+Introduction to Information Retrieval: Exercises
+
+
+Introduction to Information Retrieval: Exercises
+Solutions
+to the exercises in the book. You will need to register with CUP.
+
+Stanford CS276 assignments:
+problem set 1,
+problem set 2,
+practical exercise 1,
+practical exercise 2
+Stuttgart IIR assignments:
+1,
+2,
+3,
+4,
+5
+

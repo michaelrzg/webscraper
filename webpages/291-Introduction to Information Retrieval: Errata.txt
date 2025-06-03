@@ -1,0 +1,325 @@
+
+
+
+Introduction to Information Retrieval: Errata
+
+Introduction to Information Retrieval: Errata
+
+This page lists errata for 
+Introduction to Information Retrieval
+by Christopher D. Manning, Prabhakar Raghavan and Hinrich Schütze.  
+
+
+Entries are of the form: p. x, line y, change "A" to "B"
+Page numbers are with respect to the printed book = irbookprint.pdf.
+Line counts ignore figures, equations and other displayed material.
+Negative line counts are from the bottom of the page.
+
+CORRECTIONS MADE IN THE 2ND PRINTING OF IIR
+
+FRONT MATTER
+
+p.xix Insert in list of Acknowledgments in the paragraph beginning "We are very grateful ..."
+       Björn Andrist
+       Miklós Erdélyi
+       Marek Kowalkiewicz
+       Karthik Raghunathan
+
+p.xx Insert in list of Acknowledgments in the paragraph beginning "Many people gave us ..."
+       Valentin I. Spitkovsky
+
+CHAPTER 3
+
+p.48, end of 3rd paragraph "A walk down the reverse B-tree then enumerates all terms $R$ in the vocabulary with
+       a given prefix." Should be "A walk down the reverse B-tree then enumerates
+       all terms $R$ in the vocabulary with a given postfix."
+p.48, towards end of 4th paragraph Immediately before the sentence "Finally, we use the standard ...",
+       insert the following new sentence: We scan and filter out any terms that match the prefix as well as
+       the suffix because these two strings overlap (for instance, the query
+       \query{ba*ba} would result in the term \term{ba} being in $W\cap R$; this
+       would be filtered out).  FIXING THIS ALSO CHANGED p.49 OF PRINTED BOOK.
+
+p.55, line 2: "given a set ${\cal S}$ of strings" should be "given a set $V$ of strings"
+
+CHAPTER 6
+
+pp.100-123: Throughout Chapter 6, change all occurrences of "non-relevant" to "nonrelevant".
+       
+
+p.103, line 5: "maps the presence of query terms in a zone to ${0,1}$."
+       should be "maps the presence of query terms in a zone to $\{0,1\}$." i.e.,
+       the curly braces should be made to print.
+
+p.109, line 2: "gives an example of idfs" should be "gives an example of idf's"  
+
+p.112: Figure 6.12: "and" before "Pride and Prejudice" should not be italicized
+
+p.114, Example 6.4 final sentence "Invoking (6.9) ..." should be "Invoking (6.12) ..."
+
+p.115, line 8: change "the the" to "the" before "array Scores"
+p.115, lines 9-10: "When the scores are finally computed in Step 11, all that remains
+       in Step 12 is to pick off the $K$ documents with the highest scores." should
+       be "When the scores are finally computed in Step 9, all that remains in Step
+       10 is to pick off the $K$ documents with the highest scores."
+p.115, line 17: "it seems appear necessary to store" - delete "appear"
+
+CHAPTER 7
+
+p.125, Figure 7.1, line 5: \mbox{calculate }\mbox{w}_{t,q}\mbox{ and fetch postings list for }t\\
+       Should be \mbox{ fetch postings list for }t\\
+p.125, line 5: "with line 8 altered since we take" should be "with line 7 altered since we take"
+
+p.132, line 13: "A common solution to this issue is the user of" should be "A
+       common solution to this issue is the use of"
+
+p.134 "Rank them by vector space ..." should be "Rank the results by vector space ..."
+
+CHAPTER 10
+
+p.191, figure 10.10, lower the starting point of the three arrows
+       (the starting point should be on the lower line of
+       the box, not in the box)
+p.191, figure 10.10, lower the end point of the second arrow
+       (its end position should be at
+       about 50% of the second box)
+p. 191, figure 10.10, lower the end point of the third arrow
+       (its end position should be at
+       about 50% of the third box)
+
+CHAPTER 11
+
+p.208, line 10, change "the the" to "the"
+
+CHAPTER 13
+
+p.244, line 5, change "Bernoulli NB models" to "Bernoulli NB model models"
+
+CHAPTER 14
+
+p.273, line 3, change "Theta(|D|V|)" to "Theta(|D||V|)"
+
+p.280, figure 14.10, continue the non-straight solid line
+        all the way to the left bounding line (i.e., to the vertical line at
+	coordinate 0)
+
+CHAPTER 16
+
+p.324, caption of figure 16.2, line 3, change "Cluster" (in italics) to "cluster" (in roman)
+
+p.337, figure 16.8, the figure should depict 9 connected little circles, but
+        it only shows 8. In other words, add a little circle at the end of the last
+        line above 10
+
+p.338, line 19, change "2MK" (roman) to "2MK" (math mode = italics)
+
+CHAPTER 17
+
+p.357, line 9, change "implimentations" to "implementations"
+
+CHAPTER 20
+
+p.415, line 9, exercise 20.3: change "number back queues" to "number of back queues"
+
+CHAPTER 21
+
+p.427, line 6, change "the its states" to "its states"
+
+p.437, line 9, "inclusion of pages points to" should be
+       "inclusion of pages pointing to" 
+
+INDEX
+
+p.471, change page list for "Document-partitioned index" to "68, 70, 415"
+p.471, delete entry for "Document!partitioning"
+
+p.473, change page list for "Indexes!document-partitioned" to  "68, 70, 415"
+p.473, change page list for "Indexes!term-partitioned" to  "68, 70, 415"
+
+p.480, change page list for "Term-partitioned index" to "68, 70, 415"
+p.480, delete entry for "Terms!partitioning"
+
+
+
+CORRECTIONS MADE IN THE 3RD PRINTING OF IIR
+
+FRONT MATTER
+
+p.xix-xx: Insert in list of Acknowledgments in the paragraph beginning
+"We are very grateful ..."
+Marek Kowalkiewicz
+Juha Makkonen
+Dell Zhang
+
+CHAPTER 2
+
+p. 36, line -4, insert comma after "For example" 
+
+CHAPTER 3
+ 
+p.54: Figure 3.5: line 8 is missing a space before the closing "fi."
+ 
+p.60, line 2: "candidate mismatches" should be "candidate matches"
+ 
+CHAPTER 4
+
+p.64, Table 4.2, last line: add the symbol T in math mode
+($T$) in the first
+column. The last line should then read:
+T        tokens            100,000,000
+ 
+p.66, line -17: Insert space between "SPIMI." and
+"SPIMI". (The first SPIMI should be set as "SPIMI\@.")
+
+p.66, line -12: The hyphen in "term-docID" needs to be
+longer. (That is, set this as "term--docID" as was done for
+other hyphenated expressions.)
+
+p.68, line -10: Replace "shouldn't" with "should not"
+
+p.72, footnote: Replace "ch. 19" with "Chapter 19"
+
+
+CHAPTER 5
+
+p.81, Figure 5.1
+p.83, Figure 5.2
+"least squares fit" vs "least-squares fit"
+Change the caption of Figure 5.1 on p.81 to include
+a hyphen between "least" and "squares"
+
+p.89, Figure 5.8, line 3 of caption: Change "Preprend" to "Prepend"
+
+p.90, section heading of 5.3.2: change "Codes" to "codes"
+
+p.96, line 9: change "Codes" to "codes"
+
+CHAPTER 11
+
+p.204, line 5: Change "the cost of retrieval of a relevant document"
+to "the cost of not retrieving a relevant document"
+
+p.204, eqn (11.7), on both sides of comparison, swap order of terms
+and join with minus:
+C_0\cdot P(R=0|d) - C_1\cdot P(R=1|d) \le C_0\cdot P(R=0|d') -  C_1\cdot
+P(R=1|d')
+
+p.209, numbered item 3:  Replace the last two lines of text starting
+after "empirically" so it reads:
+not observed empirically: as might be expected, $p_t$ is shown to rise
+with $\docf_t$.  Based on
+his data analysis, a plausible proposal would be to use the estimate
+$p_t =\frac{1}{3} + \frac{2}{3}\docf_t/N$.
+
+CHAPTER 13
+
+p.237, line -3: add a prime sign (or apostrophe) after d in
+gamma(d). The line should then read: gamma(d')=China, which ...
+
+p.240, line -14: replace "we're" with "we are"
+
+p.240, line -7: replace "occuring" with "occurring"
+
+p.242, line -9: after "Finally," add "assuming that the
+length of test documents is bounded,"
+
+p.252, table above footnote: The numbers in two table cells are
+reversed.  
+In upper right corner of the table, replace the number after equals sign
+with: 27,652
+In lower left corner of the table, replace the number after equals sign
+with: 141
+Set the two occurrences of poultry and the two occurrences
+of export in the same fonts as in the table in Example 13.4
+on page 255. That is, set "poultry" in italics and set
+"export" in textsf (sans serif).
+
+p.252, footnote, replace Equation (13.17) with Equation (13.18)
+
+p.253, formula below line 1: replace the number after the
+approx sign with: 0.0001105 (that is, there should be two
+1s, not one 1)
+
+p.255, table above line -6: The numbers in two table cells are reversed.
+In upper right corner of table, replace the number after equal sign with
+27,652 and
+the number after approx sign with 27,694.4.
+In left lower corner of table, replace the number after equal sign with
+141 and
+the number after approx sign with 183.4
+
+p.258, table in Exercise 13.5: Set the four words brazil,
+council, producers, and roasted using textsf (the same way
+all terms are set, e.g., the terms london, british, britain
+in Table 13.7). 
+ 
+p.264, line -14: replace "the two \chi^2 formulas" with "the
+two X^2 formulas". Use the same symbol as is
+displayed as the first symbol of the two equations that the
+exercise refers to (13.18 and 13.19).
+
+CHAPTER 15
+
+p.298, line 11: Change "will be helpful to" to "will be helpful in"
+
+p.314, line -1: Change "Figure ??" to "Table 15.3"
+
+p.315, line -13: Change "Becuase" to "Because"
+
+CHAPTER 16
+
+p.330, line 12: insert "of" after "maximum". The sentence
+then should read "reaches its maximum of log N"
+
+p.338, line -2: insert "and covariance is spherical" after
+"distributed". The sentence should then read "If the noise
+is normally distributed and covariance is spherical, this
+procedure will result in clusters of spherical shape."
+
+CHAPTER 17
+
+p.348, Figure 17.1: Align the document title "Backtoschool
+spending is up" with the other document titles. Remove the
+period from "Ag trade reform." and also align this title with the
+other document titles.
+
+p.349, Figure 17.2, line 5: change "collects" to "assembles"
+
+p.352, Figure 17.5: Align the document title "Backtoschool
+spending is up" with the other document titles. Remove the
+period from "Ag trade reform." and also align this title with the
+other document titles.
+
+p.361, line 5: change "over" to "on" (sentence should then
+read: by induction on the number of clusters K)
+
+CHAPTER 19:
+ 
+p.387, first line of Section 19.2: "growth of the web" – replace ‘web’
+by ‘Web’
+ 
+p. 388, lines 10 and 11: “content creation on the web” and “the web
+contained truth” - replace ‘web’ by ‘Web’
+ 
+p. 388 bottom line: "as show in" should be “as shown in”
+
+CHAPTER 20:
+ 
+p.412, line 12: change "the designers of Mercator recommend of the
+order of five attempts" to “Mercator's designers recommend roughly
+five attempts” 
+ 
+p.415, line 5 of Section 20.3: "also know as local index" -> “also known
+as local index”
+ 
+p.426, fourth line from the bottom: "such the visit frequency converges”
+should be “the visit frequency converges”
+
+p.426, line -3: Insert "a" before "fixed, steady-state quantity".
+
+p.428: Beginning of the page: move the footnote 2 to be at the end of
+the sentence after "steady state." (so it's not confused with the math
+material).
+
+
+
+
