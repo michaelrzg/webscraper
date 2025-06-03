@@ -43,6 +43,8 @@ class GenerateCorpusStatistics:
 
         # sort the dictionary by the total count value in each key value tuple (key, (total count, document count))
         self.sorted_dict = sorted(self.corpus.items(), key=lambda item: item[1])
+        # remove punctuation
+        self.sorted_dict = [t for t in self.sorted_dict if t[0] not in string.punctuation]
         # remove stopwords via nltk
         stopwordsset = set(stopwords.words('english'))
         self.sorted_dict_no_stopwords = [t for t in self.sorted_dict if t[0] not in stopwordsset]
@@ -50,16 +52,21 @@ class GenerateCorpusStatistics:
         #print(sorted_dict)
     # print the statistics of the preprocessing
     def print_statistics(self):
-            print("Unique words: ", len(self.unique_words_set))
             print("Total words: " , self.total_words)
             print("Total words (stopwords removed):", len(self.sorted_dict))
+            print("Unique words: ", len(self.unique_words_set))
             print("Average Page Length: ", self.total_words/ len(os.listdir(self.directory)))
-            top_30 = [x for x in self.sorted_dict[-30:]][::-1]
-            print("Top 30 words: ")
-            top_30 = [x for x in self.sorted_dict_no_stopwords[-30:]][::-1]
-            print("Top 30 words: ")
+            # last 30 words are highest, so grabing last 30 words and reversing list
+            top_30 = self.sorted_dict[-30:][::-1]
+            print("Top 30 words (with stopwords): ")
             counter=1
             for x in top_30:
+                print(f"\t{counter}: '{x[0]}' Count: {x[1][0]} Documents: {x[1][1]}")
+                counter+=1
+            top_30_nostop = [x for x in self.sorted_dict_no_stopwords[-30:]][::-1]
+            print("Top 30 words: (without stopwords) ")
+            counter=1
+            for x in top_30_nostop:
                 print(f"\t{counter}: '{x[0]}' Count: {x[1][0]} Documents: {x[1][1]}")
                 counter+=1
 
