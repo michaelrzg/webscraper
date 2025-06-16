@@ -36,7 +36,7 @@ class Crawler:
 
     # get the raw html code in the correct encoding format
     def get_html(self,url):
-        print(url)
+        #print(url)
         try:
             page = urlopen(url)
             encoding = page.info().get_content_charset()

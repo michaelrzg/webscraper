@@ -14,10 +14,10 @@ class GenerateCorpusStatistics:
         self.corpus = {}
         self.total_words = 0
         self.directory = directory
-        self.preprocess()
+        self.process()
         self.print_statistics()
     # preprocess the scraped set of webpages
-    def preprocess(self):
+    def process(self):
         for filename in os.listdir(self.directory):
             # keep track if a word has appeared in this docu before
             frequency = {}
